@@ -1,0 +1,152 @@
+// BREAKPOINTS
+
+@mixin break-w-custom ($w) {
+	@media only screen and (min-width: $w) {
+		@content;
+	}
+}
+
+@mixin break-w-xl {
+  @media only screen and (min-width: $break-hor-xlarge) {
+	 @content;
+  }
+}
+
+@mixin break-w-l {
+	@media only screen and (min-width: $break-hor-large) {
+		@content;
+	}
+}
+
+@mixin break-w-m {
+	@media only screen and (min-width: $break-hor-medium) {
+		@content;
+	}
+}
+
+@mixin break-w-s {
+	@media only screen and (min-width: $break-hor-small) {
+		@content;
+	}
+}
+
+@mixin break-h-custom ($h) {
+	@media only screen and (min-height: $h) {
+		@content;
+	}
+}
+
+@mixin break-h-xl {
+	@media only screen and (min-height: $break-hor-xlarge) {
+		@content;
+	}
+}
+
+@mixin break-h-l {
+	@media only screen and (min-height: $break-hor-large) {
+		@content;
+	}
+}
+
+@mixin break-h-m {
+	@media only screen and (min-height: $break-hor-medium) {
+		@content;
+	}
+}
+
+@mixin break-h-s {
+	@media only screen and (min-height: $break-hor-small) {
+		@content;
+	}
+}
+
+@mixin if-retina {
+	@media
+	(-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+		@content;
+	}
+}
+
+// TYPOGRAPHY
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin webfont ($family, $file, $weight: "normal") {
+	@font-face {
+		font-family: $family;
+		font-style: normal;
+		font-weight: $weight;
+			src: url('/path/to/font/#{$file}.eot');
+			src: url('/path/to/font/#{$file}.eot?') format('eot'),
+				  url('/path/to/font/#{$file}.woff') format('woff'),
+				  url('/path/to/font/#{$file}.ttf')  format('truetype');
+	}
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+// OTHER
+
+@mixin calc($arg) {
+	width: -webkit-calc(#{$arg});
+	width: -moz-calc(#{$arg});
+	width: -ms-calc(#{$arg});
+	width: calc(#{$arg});
+}
+
+@mixin box-sizing($type) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+
+@mixin border-radius($amount) {
+	-moz-border-radius: $amount;
+	-webkit-border-radius: $amount;
+	-o-border-radius: $amount;
+	border-radius: $amount;
+}
+
+@mixin vertical-align {
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin animate($type, $speed, $ease) {
+	-webkit-transition: $type $speed $ease;
+	-moz-transition: $type $speed $ease;
+	-o-transition: $type $speed $ease;
+	transition: $type $speed $ease;
+}
+
+@mixin animateTransform($speed, $ease) {
+	-webkit-transition: -webkit-transform $speed $ease;
+	-moz-transition: -moz-transform $speed $ease;
+	-o-transition: -o-transform $speed $ease;
+	transition: transform $speed $ease;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

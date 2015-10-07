@@ -1,0 +1,37 @@
+$showDebug: false;
+
+// SPACES & SIZING
+$site-padding-s: 15px;
+$site-padding-m: 40px;
+$site-padding-l: 40px;
+$site-padding-xl: 10%;
+
+$site-gutter-s: 20px;
+$site-gutter-l: 40px;
+
+// BREAKPOINTS: HORIZONTAL
+$break-w-s: 100px;
+$break-w-m: 720px;
+$break-w-l: 1024px;
+$break-w-xl: 1280px;
+
+// BREAKPOINTS: VERTICAL
+$break-h-s: 100px;
+$break-h-m: 720px;
+$break-h-l: 1024px;
+$break-h-xl: 1280px;
+
+// COLORS
+
+$c-white: #fff;
+$c-black: #000;
+
+$c-grey-light: #eee;
+$c-grey-med: #ddd;
+$c-grey-dark: #838383;
+
+$c-brand-one-med: #ee0028;
+
+// ANIMATION
+
+$t-ease-bezier: cubic-bezier(1, 0, 0, 1);
