@@ -72,7 +72,13 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['src/sass/**/*.scss'],
-				tasks: ['sass', 'postcss']
+				tasks: ['sass', 'postcss'],
+				options: {
+					livereload: {
+						host: 'localhost',
+						port: 7777
+					}
+				}
 			},
 			stylus: {
 				files: ['src/stylus/**/*.styl'],

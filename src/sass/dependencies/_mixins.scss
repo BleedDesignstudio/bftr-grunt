@@ -34,6 +34,12 @@ $break: width;
 	}
 }
 
+@mixin font-gradient($c1, $c1, $pos: top) {
+  background: -webkit-linear-gradient($pos, $c1, $c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @mixin make-font-size($fs-font-size) {
 	@if type-of($fs-font-size) == "list" {
 		font-size: nth($fs-font-size, 1);
