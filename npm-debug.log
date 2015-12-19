@@ -1,0 +1,634 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-postcss',
+1 verbose cli   'pixrem',
+1 verbose cli   'autoprefixer',
+1 verbose cli   'cssnano',
+1 verbose cli   '-S' ]
+2 info using npm@3.3.4
+3 info using node@v0.10.31
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData grunt-postcss@^0.7.1
+8 silly fetchPackageMetaData pixrem@^3.0.0
+9 silly fetchPackageMetaData autoprefixer
+10 silly fetchPackageMetaData cssnano@*
+11 silly fetchNamedPackageData grunt-postcss
+12 silly mapToRegistry name grunt-postcss
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/grunt-postcss
+16 silly fetchNamedPackageData pixrem
+17 silly mapToRegistry name pixrem
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/pixrem
+21 silly fetchNamedPackageData cssnano
+22 silly mapToRegistry name cssnano
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/cssnano
+26 silly fetchNamedPackageData autoprefixer
+27 silly mapToRegistry name autoprefixer
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry uri https://registry.npmjs.org/autoprefixer
+31 verbose request uri https://registry.npmjs.org/autoprefixer
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 16:56:44
+34 verbose request id 38161c07a2d76178
+35 http request GET https://registry.npmjs.org/autoprefixer
+36 verbose request uri https://registry.npmjs.org/grunt-postcss
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 16:56:44
+39 verbose etag "CHV7YY7198DP8E4OY2NVG04IH"
+40 http request GET https://registry.npmjs.org/grunt-postcss
+41 verbose request uri https://registry.npmjs.org/pixrem
+42 verbose request no auth needed
+43 info attempt registry request try #1 at 16:56:44
+44 verbose etag "BVRBCAJPSAE2ER4BNKJNWHHV0"
+45 http request GET https://registry.npmjs.org/pixrem
+46 verbose request uri https://registry.npmjs.org/cssnano
+47 verbose request no auth needed
+48 info attempt registry request try #1 at 16:56:44
+49 verbose etag "2UWJ1Q5X74XC3CXPJIE8FJYOD"
+50 http request GET https://registry.npmjs.org/cssnano
+51 http 304 https://registry.npmjs.org/pixrem
+52 verbose headers { date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+52 verbose headers   via: '1.1 varnish',
+52 verbose headers   'cache-control': 'max-age=300',
+52 verbose headers   etag: '"BVRBCAJPSAE2ER4BNKJNWHHV0"',
+52 verbose headers   age: '287',
+52 verbose headers   connection: 'keep-alive',
+52 verbose headers   'x-served-by': 'cache-fra1244-FRA',
+52 verbose headers   'x-cache': 'HIT',
+52 verbose headers   'x-cache-hits': '1',
+52 verbose headers   'x-timer': 'S1450195005.178332,VS0,VE0',
+52 verbose headers   vary: 'Accept' }
+53 silly get cb [ 304,
+53 silly get   { date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+53 silly get     via: '1.1 varnish',
+53 silly get     'cache-control': 'max-age=300',
+53 silly get     etag: '"BVRBCAJPSAE2ER4BNKJNWHHV0"',
+53 silly get     age: '287',
+53 silly get     connection: 'keep-alive',
+53 silly get     'x-served-by': 'cache-fra1244-FRA',
+53 silly get     'x-cache': 'HIT',
+53 silly get     'x-cache-hits': '1',
+53 silly get     'x-timer': 'S1450195005.178332,VS0,VE0',
+53 silly get     vary: 'Accept' } ]
+54 verbose etag https://registry.npmjs.org/pixrem from cache
+55 verbose get saving pixrem to /Users/kristofferlundberg/.npm/registry.npmjs.org/pixrem/.cache.json
+56 http 304 https://registry.npmjs.org/cssnano
+57 verbose headers { date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+57 verbose headers   via: '1.1 varnish',
+57 verbose headers   'cache-control': 'max-age=300',
+57 verbose headers   etag: '"2UWJ1Q5X74XC3CXPJIE8FJYOD"',
+57 verbose headers   age: '159',
+57 verbose headers   connection: 'keep-alive',
+57 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+57 verbose headers   'x-cache': 'HIT',
+57 verbose headers   'x-cache-hits': '2',
+57 verbose headers   'x-timer': 'S1450195005.183484,VS0,VE0',
+57 verbose headers   vary: 'Accept' }
+58 silly get cb [ 304,
+58 silly get   { date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+58 silly get     via: '1.1 varnish',
+58 silly get     'cache-control': 'max-age=300',
+58 silly get     etag: '"2UWJ1Q5X74XC3CXPJIE8FJYOD"',
+58 silly get     age: '159',
+58 silly get     connection: 'keep-alive',
+58 silly get     'x-served-by': 'cache-fra1230-FRA',
+58 silly get     'x-cache': 'HIT',
+58 silly get     'x-cache-hits': '2',
+58 silly get     'x-timer': 'S1450195005.183484,VS0,VE0',
+58 silly get     vary: 'Accept' } ]
+59 verbose etag https://registry.npmjs.org/cssnano from cache
+60 verbose get saving cssnano to /Users/kristofferlundberg/.npm/registry.npmjs.org/cssnano/.cache.json
+61 http 304 https://registry.npmjs.org/grunt-postcss
+62 verbose headers { date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+62 verbose headers   via: '1.1 varnish',
+62 verbose headers   'cache-control': 'max-age=300',
+62 verbose headers   etag: '"CHV7YY7198DP8E4OY2NVG04IH"',
+62 verbose headers   age: '18',
+62 verbose headers   connection: 'keep-alive',
+62 verbose headers   'x-served-by': 'cache-fra1229-FRA',
+62 verbose headers   'x-cache': 'HIT',
+62 verbose headers   'x-cache-hits': '1',
+62 verbose headers   'x-timer': 'S1450195005.184946,VS0,VE0',
+62 verbose headers   vary: 'Accept' }
+63 silly get cb [ 304,
+63 silly get   { date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+63 silly get     via: '1.1 varnish',
+63 silly get     'cache-control': 'max-age=300',
+63 silly get     etag: '"CHV7YY7198DP8E4OY2NVG04IH"',
+63 silly get     age: '18',
+63 silly get     connection: 'keep-alive',
+63 silly get     'x-served-by': 'cache-fra1229-FRA',
+63 silly get     'x-cache': 'HIT',
+63 silly get     'x-cache-hits': '1',
+63 silly get     'x-timer': 'S1450195005.184946,VS0,VE0',
+63 silly get     vary: 'Accept' } ]
+64 verbose etag https://registry.npmjs.org/grunt-postcss from cache
+65 verbose get saving grunt-postcss to /Users/kristofferlundberg/.npm/registry.npmjs.org/grunt-postcss/.cache.json
+66 http 200 https://registry.npmjs.org/autoprefixer
+67 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+67 verbose headers   etag: '"2RUSKKSDFOMEKDPHEEKGGVF1G"',
+67 verbose headers   'content-type': 'application/json',
+67 verbose headers   'cache-control': 'max-age=300',
+67 verbose headers   'content-length': '133349',
+67 verbose headers   'accept-ranges': 'bytes',
+67 verbose headers   date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+67 verbose headers   via: '1.1 varnish',
+67 verbose headers   age: '158',
+67 verbose headers   connection: 'keep-alive',
+67 verbose headers   'x-served-by': 'cache-fra1246-FRA',
+67 verbose headers   'x-cache': 'HIT',
+67 verbose headers   'x-cache-hits': '4',
+67 verbose headers   'x-timer': 'S1450195005.184810,VS0,VE0',
+67 verbose headers   vary: 'Accept' }
+68 silly get cb [ 200,
+68 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+68 silly get     etag: '"2RUSKKSDFOMEKDPHEEKGGVF1G"',
+68 silly get     'content-type': 'application/json',
+68 silly get     'cache-control': 'max-age=300',
+68 silly get     'content-length': '133349',
+68 silly get     'accept-ranges': 'bytes',
+68 silly get     date: 'Tue, 15 Dec 2015 15:56:45 GMT',
+68 silly get     via: '1.1 varnish',
+68 silly get     age: '158',
+68 silly get     connection: 'keep-alive',
+68 silly get     'x-served-by': 'cache-fra1246-FRA',
+68 silly get     'x-cache': 'HIT',
+68 silly get     'x-cache-hits': '4',
+68 silly get     'x-timer': 'S1450195005.184810,VS0,VE0',
+68 silly get     vary: 'Accept' } ]
+69 verbose get saving autoprefixer to /Users/kristofferlundberg/.npm/registry.npmjs.org/autoprefixer/.cache.json
+70 silly install normalizeTree
+71 silly loadCurrentTree Finishing
+72 silly loadIdealTree Starting
+73 silly install loadIdealTree
+74 silly cloneCurrentTree Starting
+75 silly install cloneCurrentTreeToIdealTree
+76 silly cloneCurrentTree Finishing
+77 silly loadShrinkwrap Starting
+78 silly install loadShrinkwrap
+79 silly loadShrinkwrap Finishing
+80 silly loadAllDepsIntoIdealTree Starting
+81 silly install loadAllDepsIntoIdealTree
+82 silly resolveWithNewModule pixrem@3.0.0 checking installable status
+83 silly cache add args [ 'pixrem@^3.0.0', null ]
+84 verbose cache add spec pixrem@^3.0.0
+85 silly resolveWithNewModule cssnano@3.4.0 checking installable status
+86 silly cache add args [ 'cssnano@*', null ]
+87 verbose cache add spec cssnano@*
+88 silly resolveWithNewModule grunt-postcss@0.7.1 checking installable status
+89 silly cache add args [ 'grunt-postcss@^0.7.1', null ]
+90 verbose cache add spec grunt-postcss@^0.7.1
+91 silly resolveWithNewModule autoprefixer@6.1.2 checking installable status
+92 silly cache add args [ 'autoprefixer', null ]
+93 verbose cache add spec autoprefixer
+94 silly cache add parsed spec { raw: 'pixrem@^3.0.0',
+94 silly cache add   scope: null,
+94 silly cache add   name: 'pixrem',
+94 silly cache add   rawSpec: '^3.0.0',
+94 silly cache add   spec: '>=3.0.0 <4.0.0',
+94 silly cache add   type: 'range' }
+95 silly addNamed pixrem@>=3.0.0 <4.0.0
+96 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for pixrem
+97 silly addNameRange { name: 'pixrem', range: '>=3.0.0 <4.0.0', hasData: false }
+98 silly mapToRegistry name pixrem
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry uri https://registry.npmjs.org/pixrem
+102 verbose addNameRange registry:https://registry.npmjs.org/pixrem not in flight; fetching
+103 silly cache add parsed spec { raw: 'cssnano@*',
+103 silly cache add   scope: null,
+103 silly cache add   name: 'cssnano',
+103 silly cache add   rawSpec: '*',
+103 silly cache add   spec: '*',
+103 silly cache add   type: 'range' }
+104 silly addNamed cssnano@*
+105 verbose addNamed "*" is a valid semver range for cssnano
+106 silly addNameRange { name: 'cssnano', range: '*', hasData: false }
+107 silly mapToRegistry name cssnano
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry uri https://registry.npmjs.org/cssnano
+111 verbose addNameRange registry:https://registry.npmjs.org/cssnano not in flight; fetching
+112 silly cache add parsed spec { raw: 'grunt-postcss@^0.7.1',
+112 silly cache add   scope: null,
+112 silly cache add   name: 'grunt-postcss',
+112 silly cache add   rawSpec: '^0.7.1',
+112 silly cache add   spec: '>=0.7.1 <0.8.0',
+112 silly cache add   type: 'range' }
+113 silly addNamed grunt-postcss@>=0.7.1 <0.8.0
+114 verbose addNamed ">=0.7.1 <0.8.0" is a valid semver range for grunt-postcss
+115 silly addNameRange { name: 'grunt-postcss',
+115 silly addNameRange   range: '>=0.7.1 <0.8.0',
+115 silly addNameRange   hasData: false }
+116 silly mapToRegistry name grunt-postcss
+117 silly mapToRegistry using default registry
+118 silly mapToRegistry registry https://registry.npmjs.org/
+119 silly mapToRegistry uri https://registry.npmjs.org/grunt-postcss
+120 verbose addNameRange registry:https://registry.npmjs.org/grunt-postcss not in flight; fetching
+121 silly cache add parsed spec { raw: 'autoprefixer',
+121 silly cache add   scope: null,
+121 silly cache add   name: 'autoprefixer',
+121 silly cache add   rawSpec: '',
+121 silly cache add   spec: '*',
+121 silly cache add   type: 'range' }
+122 silly addNamed autoprefixer@*
+123 verbose addNamed "*" is a valid semver range for autoprefixer
+124 silly addNameRange { name: 'autoprefixer', range: '*', hasData: false }
+125 silly mapToRegistry name autoprefixer
+126 silly mapToRegistry using default registry
+127 silly mapToRegistry registry https://registry.npmjs.org/
+128 silly mapToRegistry uri https://registry.npmjs.org/autoprefixer
+129 verbose addNameRange registry:https://registry.npmjs.org/autoprefixer not in flight; fetching
+130 verbose request uri https://registry.npmjs.org/pixrem
+131 verbose request no auth needed
+132 info attempt registry request try #1 at 16:57:40
+133 verbose etag "BVRBCAJPSAE2ER4BNKJNWHHV0"
+134 http request GET https://registry.npmjs.org/pixrem
+135 verbose request uri https://registry.npmjs.org/cssnano
+136 verbose request no auth needed
+137 info attempt registry request try #1 at 16:57:40
+138 verbose etag "2UWJ1Q5X74XC3CXPJIE8FJYOD"
+139 http request GET https://registry.npmjs.org/cssnano
+140 verbose request uri https://registry.npmjs.org/grunt-postcss
+141 verbose request no auth needed
+142 info attempt registry request try #1 at 16:57:40
+143 verbose etag "CHV7YY7198DP8E4OY2NVG04IH"
+144 http request GET https://registry.npmjs.org/grunt-postcss
+145 verbose request uri https://registry.npmjs.org/autoprefixer
+146 verbose request no auth needed
+147 info attempt registry request try #1 at 16:57:40
+148 verbose etag "2RUSKKSDFOMEKDPHEEKGGVF1G"
+149 http request GET https://registry.npmjs.org/autoprefixer
+150 http 304 https://registry.npmjs.org/pixrem
+151 verbose headers { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+151 verbose headers   via: '1.1 varnish',
+151 verbose headers   'cache-control': 'max-age=300',
+151 verbose headers   etag: '"BVRBCAJPSAE2ER4BNKJNWHHV0"',
+151 verbose headers   age: '190',
+151 verbose headers   connection: 'keep-alive',
+151 verbose headers   'x-served-by': 'cache-ams4120-AMS',
+151 verbose headers   'x-cache': 'HIT',
+151 verbose headers   'x-cache-hits': '1',
+151 verbose headers   'x-timer': 'S1450195060.608242,VS0,VE0',
+151 verbose headers   vary: 'Accept' }
+152 silly get cb [ 304,
+152 silly get   { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+152 silly get     via: '1.1 varnish',
+152 silly get     'cache-control': 'max-age=300',
+152 silly get     etag: '"BVRBCAJPSAE2ER4BNKJNWHHV0"',
+152 silly get     age: '190',
+152 silly get     connection: 'keep-alive',
+152 silly get     'x-served-by': 'cache-ams4120-AMS',
+152 silly get     'x-cache': 'HIT',
+152 silly get     'x-cache-hits': '1',
+152 silly get     'x-timer': 'S1450195060.608242,VS0,VE0',
+152 silly get     vary: 'Accept' } ]
+153 verbose etag https://registry.npmjs.org/pixrem from cache
+154 verbose get saving pixrem to /Users/kristofferlundberg/.npm/registry.npmjs.org/pixrem/.cache.json
+155 silly addNameRange number 2 { name: 'pixrem', range: '>=3.0.0 <4.0.0', hasData: true }
+156 silly addNameRange versions [ 'pixrem',
+156 silly addNameRange   [ '0.1.0',
+156 silly addNameRange     '0.1.1',
+156 silly addNameRange     '0.1.2',
+156 silly addNameRange     '0.1.3',
+156 silly addNameRange     '0.1.4',
+156 silly addNameRange     '1.0.0',
+156 silly addNameRange     '1.0.1',
+156 silly addNameRange     '1.1.0',
+156 silly addNameRange     '1.1.1',
+156 silly addNameRange     '1.2.0',
+156 silly addNameRange     '1.2.1',
+156 silly addNameRange     '1.2.2',
+156 silly addNameRange     '1.2.3',
+156 silly addNameRange     '1.2.4',
+156 silly addNameRange     '1.3.0',
+156 silly addNameRange     '1.3.1',
+156 silly addNameRange     '2.0.0',
+156 silly addNameRange     '2.0.1',
+156 silly addNameRange     '3.0.0' ] ]
+157 silly addNamed pixrem@3.0.0
+158 verbose addNamed "3.0.0" is a plain semver version for pixrem
+159 silly mapToRegistry name pixrem
+160 silly mapToRegistry using default registry
+161 silly mapToRegistry registry https://registry.npmjs.org/
+162 silly mapToRegistry uri https://registry.npmjs.org/pixrem
+163 verbose addRemoteTarball https://registry.npmjs.org/pixrem/-/pixrem-3.0.0.tgz not in flight; adding
+164 verbose addRemoteTarball [ 'https://registry.npmjs.org/pixrem/-/pixrem-3.0.0.tgz',
+164 verbose addRemoteTarball   '862bd7e9e2cc36c6372bad565c4c11e0a9aa42d1' ]
+165 info retry fetch attempt 1 at 16:57:40
+166 info attempt registry request try #1 at 16:57:40
+167 http fetch GET https://registry.npmjs.org/pixrem/-/pixrem-3.0.0.tgz
+168 http 304 https://registry.npmjs.org/cssnano
+169 verbose headers { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+169 verbose headers   via: '1.1 varnish',
+169 verbose headers   'cache-control': 'max-age=300',
+169 verbose headers   etag: '"2UWJ1Q5X74XC3CXPJIE8FJYOD"',
+169 verbose headers   age: '32',
+169 verbose headers   connection: 'keep-alive',
+169 verbose headers   'x-served-by': 'cache-ams4135-AMS',
+169 verbose headers   'x-cache': 'HIT',
+169 verbose headers   'x-cache-hits': '1',
+169 verbose headers   'x-timer': 'S1450195060.632100,VS0,VE1',
+169 verbose headers   vary: 'Accept' }
+170 silly get cb [ 304,
+170 silly get   { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+170 silly get     via: '1.1 varnish',
+170 silly get     'cache-control': 'max-age=300',
+170 silly get     etag: '"2UWJ1Q5X74XC3CXPJIE8FJYOD"',
+170 silly get     age: '32',
+170 silly get     connection: 'keep-alive',
+170 silly get     'x-served-by': 'cache-ams4135-AMS',
+170 silly get     'x-cache': 'HIT',
+170 silly get     'x-cache-hits': '1',
+170 silly get     'x-timer': 'S1450195060.632100,VS0,VE1',
+170 silly get     vary: 'Accept' } ]
+171 verbose etag https://registry.npmjs.org/cssnano from cache
+172 verbose get saving cssnano to /Users/kristofferlundberg/.npm/registry.npmjs.org/cssnano/.cache.json
+173 silly addNameRange number 2 { name: 'cssnano', range: '*', hasData: true }
+174 silly addNameRange versions [ 'cssnano',
+174 silly addNameRange   [ '1.0.0',
+174 silly addNameRange     '1.0.1',
+174 silly addNameRange     '1.0.2',
+174 silly addNameRange     '1.1.0',
+174 silly addNameRange     '1.2.0',
+174 silly addNameRange     '1.2.1',
+174 silly addNameRange     '1.3.0',
+174 silly addNameRange     '1.3.1',
+174 silly addNameRange     '1.3.2',
+174 silly addNameRange     '1.3.3',
+174 silly addNameRange     '1.4.0',
+174 silly addNameRange     '1.4.1',
+174 silly addNameRange     '1.4.2',
+174 silly addNameRange     '1.4.3',
+174 silly addNameRange     '2.0.0',
+174 silly addNameRange     '2.0.1',
+174 silly addNameRange     '2.0.2',
+174 silly addNameRange     '2.0.3',
+174 silly addNameRange     '2.1.0',
+174 silly addNameRange     '2.1.1',
+174 silly addNameRange     '2.2.0',
+174 silly addNameRange     '2.3.0',
+174 silly addNameRange     '2.4.0',
+174 silly addNameRange     '2.5.0',
+174 silly addNameRange     '2.6.0',
+174 silly addNameRange     '2.6.1',
+174 silly addNameRange     '3.0.0',
+174 silly addNameRange     '3.0.1',
+174 silly addNameRange     '3.0.2',
+174 silly addNameRange     '3.0.3',
+174 silly addNameRange     '3.1.0',
+174 silly addNameRange     '3.2.0',
+174 silly addNameRange     '3.3.0',
+174 silly addNameRange     '3.3.1',
+174 silly addNameRange     '3.3.2',
+174 silly addNameRange     '3.4.0' ] ]
+175 silly addNamed cssnano@3.4.0
+176 verbose addNamed "3.4.0" is a plain semver version for cssnano
+177 silly mapToRegistry name cssnano
+178 silly mapToRegistry using default registry
+179 silly mapToRegistry registry https://registry.npmjs.org/
+180 silly mapToRegistry uri https://registry.npmjs.org/cssnano
+181 verbose addRemoteTarball https://registry.npmjs.org/cssnano/-/cssnano-3.4.0.tgz not in flight; adding
+182 verbose addRemoteTarball [ 'https://registry.npmjs.org/cssnano/-/cssnano-3.4.0.tgz',
+182 verbose addRemoteTarball   '14d391032de4760d22e5db9f1fec1f0868e4bbb7' ]
+183 info retry fetch attempt 1 at 16:57:40
+184 info attempt registry request try #1 at 16:57:40
+185 http fetch GET https://registry.npmjs.org/cssnano/-/cssnano-3.4.0.tgz
+186 http 304 https://registry.npmjs.org/grunt-postcss
+187 verbose headers { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+187 verbose headers   via: '1.1 varnish',
+187 verbose headers   'cache-control': 'max-age=300',
+187 verbose headers   etag: '"CHV7YY7198DP8E4OY2NVG04IH"',
+187 verbose headers   age: '190',
+187 verbose headers   connection: 'keep-alive',
+187 verbose headers   'x-served-by': 'cache-ams4144-AMS',
+187 verbose headers   'x-cache': 'HIT',
+187 verbose headers   'x-cache-hits': '1',
+187 verbose headers   'x-timer': 'S1450195060.636960,VS0,VE0',
+187 verbose headers   vary: 'Accept' }
+188 silly get cb [ 304,
+188 silly get   { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+188 silly get     via: '1.1 varnish',
+188 silly get     'cache-control': 'max-age=300',
+188 silly get     etag: '"CHV7YY7198DP8E4OY2NVG04IH"',
+188 silly get     age: '190',
+188 silly get     connection: 'keep-alive',
+188 silly get     'x-served-by': 'cache-ams4144-AMS',
+188 silly get     'x-cache': 'HIT',
+188 silly get     'x-cache-hits': '1',
+188 silly get     'x-timer': 'S1450195060.636960,VS0,VE0',
+188 silly get     vary: 'Accept' } ]
+189 verbose etag https://registry.npmjs.org/grunt-postcss from cache
+190 verbose get saving grunt-postcss to /Users/kristofferlundberg/.npm/registry.npmjs.org/grunt-postcss/.cache.json
+191 http 304 https://registry.npmjs.org/autoprefixer
+192 verbose headers { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+192 verbose headers   via: '1.1 varnish',
+192 verbose headers   'cache-control': 'max-age=300',
+192 verbose headers   etag: '"2RUSKKSDFOMEKDPHEEKGGVF1G"',
+192 verbose headers   age: '257',
+192 verbose headers   connection: 'keep-alive',
+192 verbose headers   'x-served-by': 'cache-ams4120-AMS',
+192 verbose headers   'x-cache': 'HIT',
+192 verbose headers   'x-cache-hits': '1',
+192 verbose headers   'x-timer': 'S1450195060.637671,VS0,VE0',
+192 verbose headers   vary: 'Accept' }
+193 silly get cb [ 304,
+193 silly get   { date: 'Tue, 15 Dec 2015 15:57:40 GMT',
+193 silly get     via: '1.1 varnish',
+193 silly get     'cache-control': 'max-age=300',
+193 silly get     etag: '"2RUSKKSDFOMEKDPHEEKGGVF1G"',
+193 silly get     age: '257',
+193 silly get     connection: 'keep-alive',
+193 silly get     'x-served-by': 'cache-ams4120-AMS',
+193 silly get     'x-cache': 'HIT',
+193 silly get     'x-cache-hits': '1',
+193 silly get     'x-timer': 'S1450195060.637671,VS0,VE0',
+193 silly get     vary: 'Accept' } ]
+194 verbose etag https://registry.npmjs.org/autoprefixer from cache
+195 verbose get saving autoprefixer to /Users/kristofferlundberg/.npm/registry.npmjs.org/autoprefixer/.cache.json
+196 silly addNameRange number 2 { name: 'grunt-postcss', range: '>=0.7.1 <0.8.0', hasData: true }
+197 silly addNameRange versions [ 'grunt-postcss',
+197 silly addNameRange   [ '0.1.0',
+197 silly addNameRange     '0.2.0',
+197 silly addNameRange     '0.3.0',
+197 silly addNameRange     '0.4.0',
+197 silly addNameRange     '0.5.0',
+197 silly addNameRange     '0.5.1',
+197 silly addNameRange     '0.5.2',
+197 silly addNameRange     '0.5.3',
+197 silly addNameRange     '0.5.4',
+197 silly addNameRange     '0.5.5',
+197 silly addNameRange     '0.6.0',
+197 silly addNameRange     '0.7.0',
+197 silly addNameRange     '0.7.1' ] ]
+198 silly addNamed grunt-postcss@0.7.1
+199 verbose addNamed "0.7.1" is a plain semver version for grunt-postcss
+200 silly addNameRange number 2 { name: 'autoprefixer', range: '*', hasData: true }
+201 silly addNameRange versions [ 'autoprefixer',
+201 silly addNameRange   [ '0.1.20130409',
+201 silly addNameRange     '0.2.20130413',
+201 silly addNameRange     '0.3.20130423',
+201 silly addNameRange     '0.3.20130424',
+201 silly addNameRange     '0.3.20130427',
+201 silly addNameRange     '0.3.20130502',
+201 silly addNameRange     '0.4.20130507',
+201 silly addNameRange     '0.4.20130515',
+201 silly addNameRange     '0.4.20130521',
+201 silly addNameRange     '0.4.20130524',
+201 silly addNameRange     '0.4.20130528',
+201 silly addNameRange     '0.4.20130530',
+201 silly addNameRange     '0.4.20130603',
+201 silly addNameRange     '0.5.20130615',
+201 silly addNameRange     '0.5.20130616',
+201 silly addNameRange     '0.5.20130617',
+201 silly addNameRange     '0.5.20130625',
+201 silly addNameRange     '0.5.20130626',
+201 silly addNameRange     '0.5.20130629',
+201 silly addNameRange     '0.6.20130716',
+201 silly addNameRange     '0.6.20130721',
+201 silly addNameRange     '0.6.20130728',
+201 silly addNameRange     '0.6.20130729',
+201 silly addNameRange     '0.6.20130730',
+201 silly addNameRange     '0.6.20130731',
+201 silly addNameRange     '0.7.20130805',
+201 silly addNameRange     '0.7.20130806',
+201 silly addNameRange     '0.7.20130807',
+201 silly addNameRange     '0.7.20130808',
+201 silly addNameRange     '0.7.20130810',
+201 silly addNameRange     '0.7.20130824',
+201 silly addNameRange     '0.8.20130902',
+201 silly addNameRange     '0.8.20130903',
+201 silly addNameRange     '0.8.20130906',
+201 silly addNameRange     '0.8.20130911',
+201 silly addNameRange     '0.8.20130919',
+201 silly addNameRange     '0.8.20130923',
+201 silly addNameRange     '0.8.20131001',
+201 silly addNameRange     '0.8.20131006',
+201 silly addNameRange     '0.8.20131007',
+201 silly addNameRange     '0.8.20131009',
+201 silly addNameRange     '0.8.20131015',
+201 silly addNameRange     '0.8.20131017',
+201 silly addNameRange     '0.8.20131020',
+201 silly addNameRange     '0.8.20131029',
+201 silly addNameRange     '0.8.20131104',
+201 silly addNameRange     '0.8.20131209',
+201 silly addNameRange     '0.8.20131213',
+201 silly addNameRange     '1.0.20131222',
+201 silly addNameRange     '1.0.20140103',
+201 silly addNameRange     '1.0.20140109',
+201 silly addNameRange     '1.0.20140110',
+201 silly addNameRange     '1.0.20140117',
+201 silly addNameRange     '1.0.20140130',
+201 silly addNameRange     '1.0.20140203',
+201 silly addNameRange     '1.0.20140213',
+201 silly addNameRange     '1.1.20140218',
+201 silly addNameRange     '1.1.20140222',
+201 silly addNameRange     '1.1.20140226',
+201 silly addNameRange     '1.1.20140302',
+201 silly addNameRange     '1.1.20140319',
+201 silly addNameRange     '1.1.20140327',
+201 silly addNameRange     '1.1.20140403',
+201 silly addNameRange     '1.1.20140410',
+201 silly addNameRange     '1.1.20140429',
+201 silly addNameRange     '1.1.20140430',
+201 silly addNameRange     '1.1.20140510',
+201 silly addNameRange     '1.1.20140512',
+201 silly addNameRange     '1.1.20140521',
+201 silly addNameRange     '1.1.20140523',
+201 silly addNameRange     '1.1.20140605',
+201 silly addNameRange     '1.2.0',
+201 silly addNameRange     '1.3.0',
+201 silly addNameRange     '1.3.1',
+201 silly addNameRange     '2.0.0',
+201 silly addNameRange     '2.0.1',
+201 silly addNameRange     '2.0.2',
+201 silly addNameRange     '2.1.0',
+201 silly addNameRange     '2.1.1',
+201 silly addNameRange     '2.2.0',
+201 silly addNameRange     '3.0.0',
+201 silly addNameRange     '3.1.0',
+201 silly addNameRange     '4.0.0',
+201 silly addNameRange     '5.0.0',
+201 silly addNameRange     '5.1.0',
+201 silly addNameRange     '5.1.1',
+201 silly addNameRange     '5.2.0',
+201 silly addNameRange     '6.0.0',
+201 silly addNameRange     '6.0.1',
+201 silly addNameRange     '6.0.2',
+201 silly addNameRange     '6.0.3',
+201 silly addNameRange     '6.1.0',
+201 silly addNameRange     '6.1.1',
+201 silly addNameRange     '6.1.2' ] ]
+202 silly addNamed autoprefixer@6.1.2
+203 verbose addNamed "6.1.2" is a plain semver version for autoprefixer
+204 silly mapToRegistry name grunt-postcss
+205 silly mapToRegistry using default registry
+206 silly mapToRegistry registry https://registry.npmjs.org/
+207 silly mapToRegistry uri https://registry.npmjs.org/grunt-postcss
+208 verbose addRemoteTarball https://registry.npmjs.org/grunt-postcss/-/grunt-postcss-0.7.1.tgz not in flight; adding
+209 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-postcss/-/grunt-postcss-0.7.1.tgz',
+209 verbose addRemoteTarball   '65c018d80cf51ac5b61059c95e05142549b4c496' ]
+210 silly mapToRegistry name autoprefixer
+211 silly mapToRegistry using default registry
+212 silly mapToRegistry registry https://registry.npmjs.org/
+213 silly mapToRegistry uri https://registry.npmjs.org/autoprefixer
+214 verbose addRemoteTarball https://registry.npmjs.org/autoprefixer/-/autoprefixer-6.1.2.tgz not in flight; adding
+215 verbose addRemoteTarball [ 'https://registry.npmjs.org/autoprefixer/-/autoprefixer-6.1.2.tgz',
+215 verbose addRemoteTarball   '11a36b50cc0e4adaab5570aed28cf81876e1ab3d' ]
+216 info retry fetch attempt 1 at 16:57:40
+217 info attempt registry request try #1 at 16:57:40
+218 http fetch GET https://registry.npmjs.org/grunt-postcss/-/grunt-postcss-0.7.1.tgz
+219 info retry fetch attempt 1 at 16:57:40
+220 info attempt registry request try #1 at 16:57:40
+221 http fetch GET https://registry.npmjs.org/autoprefixer/-/autoprefixer-6.1.2.tgz
+222 http fetch 200 https://registry.npmjs.org/pixrem/-/pixrem-3.0.0.tgz
+223 silly fetchAndShaCheck shasum 862bd7e9e2cc36c6372bad565c4c11e0a9aa42d1
+224 verbose addTmpTarball /var/folders/8h/0vy44d3127bcxp3cslw4526c0000gn/T/npm-57020-36bbee00/registry.npmjs.org/pixrem/-/pixrem-3.0.0.tgz not in flight; adding
+225 verbose addTmpTarball already have metadata; skipping unpack for pixrem@3.0.0
+226 http fetch 200 https://registry.npmjs.org/grunt-postcss/-/grunt-postcss-0.7.1.tgz
+227 silly fetchAndShaCheck shasum 65c018d80cf51ac5b61059c95e05142549b4c496
+228 verbose addTmpTarball /var/folders/8h/0vy44d3127bcxp3cslw4526c0000gn/T/npm-57020-36bbee00/registry.npmjs.org/grunt-postcss/-/grunt-postcss-0.7.1.tgz not in flight; adding
+229 verbose addTmpTarball already have metadata; skipping unpack for grunt-postcss@0.7.1
+230 http fetch 200 https://registry.npmjs.org/cssnano/-/cssnano-3.4.0.tgz
+231 silly fetchAndShaCheck shasum 14d391032de4760d22e5db9f1fec1f0868e4bbb7
+232 verbose addTmpTarball /var/folders/8h/0vy44d3127bcxp3cslw4526c0000gn/T/npm-57020-36bbee00/registry.npmjs.org/cssnano/-/cssnano-3.4.0.tgz not in flight; adding
+233 verbose addTmpTarball already have metadata; skipping unpack for cssnano@3.4.0
+234 http fetch 200 https://registry.npmjs.org/autoprefixer/-/autoprefixer-6.1.2.tgz
+235 silly fetchAndShaCheck shasum 11a36b50cc0e4adaab5570aed28cf81876e1ab3d
+236 verbose addTmpTarball /var/folders/8h/0vy44d3127bcxp3cslw4526c0000gn/T/npm-57020-36bbee00/registry.npmjs.org/autoprefixer/-/autoprefixer-6.1.2.tgz not in flight; adding
+237 verbose addTmpTarball already have metadata; skipping unpack for autoprefixer@6.1.2
+238 silly cache afterAdd autoprefixer@6.1.2
+239 verbose afterAdd /Users/kristofferlundberg/.npm/autoprefixer/6.1.2/package/package.json not in flight; writing
+240 verbose afterAdd /Users/kristofferlundberg/.npm/autoprefixer/6.1.2/package/package.json written
+241 silly rollbackFailedOptional Starting
+242 silly rollbackFailedOptional Finishing
+243 silly runTopLevelLifecycles Starting
+244 silly runTopLevelLifecycles Finishing
+245 silly install printInstalled
+246 verbose stack Error: EACCES, mkdir '/Users/kristofferlundberg/.npm/pixrem/3.0.0'
+247 verbose cwd /Users/kristofferlundberg/Dropbox (Bleed)/Development/boilerplates/bftr-grunt
+248 error Darwin 15.0.0
+249 error argv "node" "/usr/local/bin/npm" "install" "grunt-postcss" "pixrem" "autoprefixer" "cssnano" "-S"
+250 error node v0.10.31
+251 error npm  v3.3.4
+252 error path /Users/kristofferlundberg/.npm/pixrem/3.0.0
+253 error code EACCES
+254 error errno 3
+255 error Error: EACCES, mkdir '/Users/kristofferlundberg/.npm/pixrem/3.0.0'
+255 error  { [Error: EACCES, mkdir '/Users/kristofferlundberg/.npm/pixrem/3.0.0']
+255 error   errno: 3,
+255 error   code: 'EACCES',
+255 error   path: '/Users/kristofferlundberg/.npm/pixrem/3.0.0',
+255 error   parent: 'bftrGrunt' }
+256 error Please try running this command again as root/Administrator.
+257 verbose exit [ 3, true ]

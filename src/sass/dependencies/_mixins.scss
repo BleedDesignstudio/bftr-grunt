@@ -66,11 +66,11 @@ $break: width;
 
 // OTHER
 
-@mixin calc($arg) {
-	width: -webkit-calc(#{$arg});
-	width: -moz-calc(#{$arg});
-	width: -ms-calc(#{$arg});
-	width: calc(#{$arg});
+@mixin calc($arg, $o: width) {
+	#{$o}: -webkit-calc(#{$arg});
+	#{$o}: -moz-calc(#{$arg});
+	#{$o}: -ms-calc(#{$arg});
+	#{$o}: calc(#{$arg});
 }
 
 @mixin box-sizing($type) {

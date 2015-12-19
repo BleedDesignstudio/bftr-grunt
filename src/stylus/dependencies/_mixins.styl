@@ -34,16 +34,6 @@ if-retina()
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 		{block}
 
-calculateRem($size)
-	$remSize = $size / 16px
-	$remSize * 1rem
-
-calc($arg)
-	width: -webkit-calc($arg)
-	width: -moz-calc($arg)
-	width: -ms-calc($arg)
-	width: calc($arg)
-
 box-sizing($type)
 	-webkit-box-sizing: $type
 	-moz-box-sizing: $type

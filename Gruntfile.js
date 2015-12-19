@@ -19,14 +19,12 @@ module.exports = function(grunt) {
 				src: [				
 						'lib/dependencies/modernizr.js',
 						'lib/dependencies/jquery-1.11.1.min.js',
-						'lib/underscore-min.js',
-						'lib/backbone-min.js',
+						'lib/polyfills/html5template.js',
 						'lib/jquery.mousewheel.min.js',
-						'lib/velocity.min.js',
+						'lib/dependencies/velocity.min.js',
 						'lib/slick.min.js',
 						'lib/iscroll.js',
-						'lib/gyro.js',
-						'lib/bftrPlugins.js'						
+						'lib/gyro.js'				
 				],
 				dest: 'js/built.js',
 			},
@@ -49,7 +47,7 @@ module.exports = function(grunt) {
 			dist: {
 				src: 'css/*/*.css'
 			}
-		},	
+		},
 		sass: {
 			dist: {
 				options: {
@@ -89,19 +87,33 @@ module.exports = function(grunt) {
 			},
 			stylus: {
 				files: ['src/stylus/**/*.styl'],
-				tasks: ['stylus', 'postcss']
+				tasks: ['stylus', 'postcss'],
+				options: {
+					livereload: {
+						host: 'localhost',
+						port: 7777
+					}
+				}
 			},
 			js: {
 				files: ['src/js/**/*.js'],
-				tasks: ['uglify', 'concat']
-			},
-			img: {
-				files: ['src/assets/*'],
-				tasks: ['imagemin']
+				tasks: ['uglify', 'concat'],
+				options: {
+					livereload: {
+						host: 'localhost',
+						port: 7777
+					}
+				}
 			},
 			jade: {
 				files: 'src/views/**/*.jade',
-				tasks: ['jade']
+				tasks: ['jade'],
+				options: {
+					livereload: {
+						host: 'localhost',
+						port: 7777
+					}
+				}
 			}			
 		}
 	});
