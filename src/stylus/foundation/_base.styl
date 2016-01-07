@@ -1,56 +1,21 @@
 body
-	margin: 0
-	padding: 0
-	background: $c-black
-	color: $c-white
-	font-family: $f-primary
-	font-size: 18px
-	line-height: 1.5em
-	-webkit-font-smoothing: antialiased
-	-webkit-text-size-adjust: none
+	margin  0
+	padding 0
+	
+	background-image url('../../assets/gfx_photo_monkey.gif')
+	background-size  cover
 
-	+break-w-custom(800px)
-		background: purple
-	+break-w-l()
-		background: blue
-div#lol
-	col(1/4)
-	background: red
+.positioner
+	position relative
+	&.full
+		width  100%
+		height 100%
 
-.monkey
-	position: fixed
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	background-image: url("../../assets/gfx_photo_monkey.gif")
-	background-attachment: fixed
-	background-size: cover
-	z-index: -100
-	&.scrolled
-		display: none
-
-.intro
-	position: fixed
-	top: 0
-	left: 0
-	box-sizing: border-box
-	height: 60vH
-	width: 100%
-	padding: $site-padding-s
-	z-index: -99
-
-.content
-	margin: 40% 0 0 0
-	display: block
-	width: 100%
-
-body.scrolled
-	.monkey
-		display: none
-	.content
-		background: $c-black
+.test
+	do_calc(width, 100% - 120px)
+	background yellow
+	height 60px
 
 .row
-	overflow: auto
-	padding: $site-padding-s
+	overflow auto
+	padding  $site-padding-s

@@ -1,38 +1,24 @@
-break-w-custom($w)
-	@media only screen and (min-width: $w)
-		{block}
-
-break-w-xl()
-	@media only screen and (min-width: $break-hor-xlarge)
-		{block}
-break-w-l()
-	@media only screen and (min-width: $break-hor-large)
-		{block}
-break-w-m()
-	@media only screen and (min-width: $break-hor-medium)
-		{block}
-break-w-s()
-	@media only screen and (min-width: $break-hor-small)
-		{block}
-break-h-custom($h)
-	@media only screen and (min-height: $h)
-		{block}
-break-h-xl()
-	@media only screen and (min-height: $break-hor-xlarge)
-		{block}
-break-h-l()
-	@media only screen and (min-height: $break-hor-large)
-		{block}
-break-h-m()
-	@media only screen and (min-height: $break-hor-medium)
-		{block}
-break-h-s()
-	@media only screen and (min-height: $break-hor-small)
+break($b, $s = min-width)
+	@media only screen and ({$s}: $b)
 		{block}
 
 if-retina()
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 		{block}
+
+grab()
+	cursor -webkit-grab
+	cursor -moz-grab
+	
+	&:active
+		cursor -webkit-grabbing
+		cursor -moz-grabbing
+		
+	-webkit-user-select none
+	-moz-user-select    -moz-none
+	-webkit-user-select none
+	-ms-user-select     none
+	user-select         none
 
 box-sizing($type)
 	-webkit-box-sizing: $type
@@ -61,11 +47,6 @@ animateTransform($speed, $ease)
 	-moz-transition: -moz-transform $speed $ease
 	-o-transition: -o-transform $speed $ease
 	transition: transform $speed $ease
-
-opacity($opacity)
-	opacity: $opacity
-	$opacity-ie = $opacity * 100
-	filter: alpha(opacity = $opacity-ie)
 
 $clearfix
 	*zoom: 1
