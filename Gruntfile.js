@@ -24,7 +24,8 @@ module.exports = function(grunt) {
 						'lib/dependencies/velocity.min.js',
 						'lib/slick.min.js',
 						'lib/iscroll.js',
-						'lib/gyro.js'				
+						'lib/gyro.js',
+						'lib/bleed-functions.js'			
 				],
 				dest: 'js/built.js',
 			},

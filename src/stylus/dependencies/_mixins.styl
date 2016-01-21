@@ -1,24 +1,16 @@
-break($b, $s = min-width)
-	@media only screen and ({$s}: $b)
+break-custom($b, $a = min-width)
+	@media only screen and ({$a}: $b)
 		{block}
 
 if-retina()
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 		{block}
 
-grab()
-	cursor -webkit-grab
-	cursor -moz-grab
-	
-	&:active
-		cursor -webkit-grabbing
-		cursor -moz-grabbing
-		
-	-webkit-user-select none
-	-moz-user-select    -moz-none
-	-webkit-user-select none
-	-ms-user-select     none
-	user-select         none
+do_calc($arg, $o = width)
+	$o: -webkit-calc($arg)
+	$o: -moz-calc($arg)
+	$o: -ms-calc($arg)
+	$o: calc($arg)
 
 box-sizing($type)
 	-webkit-box-sizing: $type
@@ -47,6 +39,20 @@ animateTransform($speed, $ease)
 	-moz-transition: -moz-transform $speed $ease
 	-o-transition: -o-transform $speed $ease
 	transition: transform $speed $ease
+
+grab()
+	cursor -webkit-grab
+	cursor -moz-grab
+
+	&:active
+		cursor -webkit-grabbing
+		cursor -moz-grabbing
+
+	-webkit-user-select none
+	-moz-user-select    -moz-none
+	-webkit-user-select none
+	-ms-user-select     none
+	user-select         none
 
 $clearfix
 	*zoom: 1
