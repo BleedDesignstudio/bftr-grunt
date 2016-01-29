@@ -19,12 +19,11 @@ module.exports = function(grunt) {
 				src: [				
 						'lib/dependencies/modernizr.js',
 						'lib/dependencies/jquery-1.11.1.min.js',
-						'lib/polyfills/html5template.js',
-						'lib/jquery.mousewheel.min.js',
 						'lib/dependencies/velocity.min.js',
+						
+						'lib/polyfills/html5template.js',
+						
 						'lib/slick.min.js',
-						'lib/iscroll.js',
-						'lib/gyro.js',
 						'lib/bleed-functions.js'			
 				],
 				dest: 'js/built.js',
@@ -32,9 +31,6 @@ module.exports = function(grunt) {
 		},
 		postcss: {
 			options: {
-				map: true, // inline sourcemaps 
-
-				// or 
 				map: {
 					inline: false, // save all sourcemaps as separate files... 
 					annotation: 'css/maps/' // ...to the specified directory 
