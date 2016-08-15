@@ -16,15 +16,12 @@ module.exports = function(grunt) {
 				separator: ';\n',
 			},
 			dist: {
-				src: [				
+				src: [
 						'lib/dependencies/modernizr.js',
 						'lib/dependencies/jquery-1.11.1.min.js',
 						'lib/dependencies/velocity.min.js',
-						
-						'lib/polyfills/html5template.js',
-						
 						'lib/slick.min.js',
-						'lib/bleed-functions.js'			
+						'lib/bftr.func.js'
 				],
 				dest: 'js/built.js',
 			},
@@ -57,9 +54,7 @@ module.exports = function(grunt) {
 		},
 		stylus: {
 			compile: {
-				options: {
-					style: 'compressed'
-				},
+				compress: false,
 				files: {
 					'css/stylus/style.css': 'src/stylus/main.styl', 
 				},

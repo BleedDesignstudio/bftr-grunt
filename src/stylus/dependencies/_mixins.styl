@@ -6,6 +6,26 @@ if-retina()
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 		{block}
 
+// Fonts mixin
+font-url(file)
+	return '../fonts/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+	@font-face
+		font-family family
+		src url(font-url(file + '.eot'))
+		src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+			url(font-url(file + '.woff')) format('woff'), 
+			url(font-url(file + '.ttf')) format('truetype'), 
+			url(font-url(file + '.svg#'+ family)) format('svg')
+		font-weight weight
+		font-style normal
+	if hack-chrome-windows
+		@media screen and (-webkit-min-device-pixel-ratio:0)
+			@font-face
+				font-family family
+				src url(font-url(file + '.svg#'+ family)) format('svg')
+
 do_calc($arg, $o = width)
 	$o: -webkit-calc($arg)
 	$o: -moz-calc($arg)
@@ -27,18 +47,6 @@ vertical-align()
 	-webkit-transform: translateY(-50%)
 	-ms-transform: translateY(-50%)
 	transform: translateY(-50%)
-
-animate($type, $speed, $ease)
-	-webkit-transition: $type $speed $ease
-	-moz-transition: $type $speed $ease
-	-o-transition: $type $speed $ease
-	transition: $type $speed $ease
-
-animateTransform($speed, $ease)
-	-webkit-transition: -webkit-transform $speed $ease
-	-moz-transition: -moz-transform $speed $ease
-	-o-transition: -o-transform $speed $ease
-	transition: transform $speed $ease
 
 grab()
 	cursor -webkit-grab
