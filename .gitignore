@@ -4,3 +4,6 @@
 node_modules/
 fonts/
 psd/
+spec/
+*.sketch
+*.psd

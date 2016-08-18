@@ -1,3 +1,24 @@
+// Fonts mixin
+font-url(file)
+	return '/assets/fonts/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal', style = 'italic')
+	@font-face
+		font-family family
+		src url(font-url(file + '.eot'))
+		src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+			url(font-url(file + '.woff')) format('woff'), 
+			url(font-url(file + '.ttf')) format('truetype'), 
+			url(font-url(file + '.svg#'+ family)) format('svg')
+		font-weight weight
+		font-style style
+	if hack-chrome-windows
+		@media screen and (-webkit-min-device-pixel-ratio:0)
+			@font-face
+			font-family family
+			src url(font-url(file + '.svg#'+ family)) format('svg')
+
+
 break-custom($b, $a = min-width)
 	@media only screen and ({$a}: $b)
 		{block}

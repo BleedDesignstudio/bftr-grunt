@@ -1,16 +1,6 @@
 module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 	grunt.initConfig({
-		jade: {
-			compile: {
-				options: {
-					pretty: true,
-				},
-				files: {
-					'index.html': 'src/views/index.jade'
-				}
-			}
-		},
 		concat: {
 			options: {
 				separator: ';\n',
@@ -96,17 +86,7 @@ module.exports = function(grunt) {
 						port: 7777
 					}
 				}
-			},
-			jade: {
-				files: 'src/views/**/*.jade',
-				tasks: ['jade'],
-				options: {
-					livereload: {
-						host: 'localhost',
-						port: 7777
-					}
-				}
-			}			
+			}		
 		}
 	});
 	grunt.registerTask('default', 'watch');

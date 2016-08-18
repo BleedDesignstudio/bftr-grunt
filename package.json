@@ -1,25 +1,24 @@
 {
-  "name": "bftrGrunt",
-  "version": "0.0.2",
-  "devDependencies": {
-    "autoprefixer-core": "*",
-    "cssnano": "*",
-    "grunt": "~0.4.1",
-    "grunt-concurrent": "^2.1.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-jade": "^0.15.0",
-    "grunt-contrib-sass": "~0.9.2",
-    "grunt-contrib-stylus": "^0.22.0",
-    "grunt-contrib-uglify": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-postcss": "^0.7.1",
-    "matchdep": "~1.0.0",
-    "pixrem": "^3.0.0"
-  },
-  "dependencies": {
-    "autoprefixer": "^6.1.2",
-    "cssnano": "^3.4.0",
-    "grunt-postcss": "^0.7.1",
-    "pixrem": "^3.0.0"
-  }
+	"name": "bftrGrunt",
+	"version": "0.0.2",
+	"devDependencies": {
+		"autoprefixer-core": "*",
+		"cssnano": "*",
+		"grunt": "~0.4.1",
+		"grunt-concurrent": "^2.1.0",
+		"grunt-contrib-concat": "^0.5.1",
+		"grunt-contrib-sass": "~0.9.2",
+		"grunt-contrib-stylus": "^0.22.0",
+		"grunt-contrib-uglify": "~0.11.0",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-postcss": "^0.7.1",
+		"matchdep": "~1.0.0",
+		"pixrem": "^3.0.0"
+	},
+	"dependencies": {
+		"autoprefixer": "^6.1.2",
+		"cssnano": "^3.4.0",
+		"grunt-postcss": "^0.7.1",
+		"pixrem": "^3.0.0"
+	}
 }
