@@ -113,6 +113,66 @@ body {
 
   .pad-left {
     padding-left: 30px; } }
+@media only screen and (min-width: 400px) {
+  .marg-top {
+    margin-top: 15px; }
+
+  .marg-right {
+    margin-right: 15px; }
+
+  .marg-bot {
+    margin-bottom: 15px; }
+
+  .marg-left {
+    margin-left: 15px; } }
+@media only screen and (min-width: 600px) {
+  .marg-top {
+    margin-top: 15px; }
+
+  .marg-right {
+    margin-right: 15px; }
+
+  .marg-bot {
+    margin-bottom: 15px; }
+
+  .marg-left {
+    margin-left: 15px; } }
+@media only screen and (min-width: 800px) {
+  .marg-top {
+    margin-top: 30px; }
+
+  .marg-right {
+    margin-right: 30px; }
+
+  .marg-bot {
+    margin-bottom: 30px; }
+
+  .marg-left {
+    margin-left: 30px; } }
+@media only screen and (min-width: 1050px) {
+  .marg-top {
+    margin-top: 30px; }
+
+  .marg-right {
+    margin-right: 30px; }
+
+  .marg-bot {
+    margin-bottom: 30px; }
+
+  .marg-left {
+    margin-left: 30px; } }
+@media only screen and (min-width: 1800px) {
+  .marg-top {
+    margin-top: 30px; }
+
+  .marg-right {
+    margin-right: 30px; }
+
+  .marg-bot {
+    margin-bottom: 30px; }
+
+  .marg-left {
+    margin-left: 30px; } }
 .txt-a-right {
   text-align: right; }
 
@@ -168,7 +228,10 @@ ul.menu {
       margin: 0; }
   ul.menu a {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: opacity 200ms ease-out; }
+    ul.menu a:hover {
+      opacity: 0.5; }
 
 .quoteContainer {
   margin-top: -50px;

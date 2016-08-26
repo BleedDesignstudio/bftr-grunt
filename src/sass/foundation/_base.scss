@@ -51,6 +51,8 @@ ul.menu {
 	a {
 		color: $c-white;
 		text-decoration: none;
+		transition: opacity 200ms ease-out;
+		&:hover { opacity: 0.5; }
 	}
 }
 

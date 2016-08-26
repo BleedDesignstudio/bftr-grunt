@@ -36,6 +36,39 @@
 	.pad-left  { padding-left:   $site-padding-xl; }
 }
 
+// MARGIN
+@include break($break-w-xs, min, width) {
+	.marg-top   { margin-top:    $site-padding-xs; }
+	.marg-right { margin-right:  $site-padding-xs; }
+	.marg-bot   { margin-bottom: $site-padding-xs; }
+	.marg-left  { margin-left:   $site-padding-xs; }
+}
+@include break($break-w-s, min, width) {
+	.marg-top   { margin-top:    $site-padding-s; }
+	.marg-right { margin-right:  $site-padding-s; }
+	.marg-bot   { margin-bottom: $site-padding-s; }
+	.marg-left  { margin-left:   $site-padding-s; }
+}
+@include break($break-w-m, min, width) {
+	.marg-top   { margin-top:    $site-padding-m; }
+	.marg-right { margin-right:  $site-padding-m; }
+	.marg-bot   { margin-bottom: $site-padding-m; }
+	.marg-left  { margin-left:   $site-padding-m; }
+}
+@include break($break-w-l, min, width) {
+	.marg-top   { margin-top:    $site-padding-l; }
+	.marg-right { margin-right:  $site-padding-l; }
+	.marg-bot   { margin-bottom: $site-padding-l; }
+	.marg-left  { margin-left:   $site-padding-l; }
+}
+@include break($break-w-xl, min, width) {
+	.marg-top   { margin-top:    $site-padding-xl; }
+	.marg-right { margin-right:  $site-padding-xl; }
+	.marg-bot   { margin-bottom: $site-padding-xl; }
+	.marg-left  { margin-left:   $site-padding-xl; }
+}
+
+
 // TEXT
 .txt-a-right {
 	text-align: right;
