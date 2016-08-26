@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
+	
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	
 	grunt.initConfig({
 		concat: {
 			options: {
@@ -10,6 +12,8 @@ module.exports = function(grunt) {
 						'lib/dependencies/modernizr.js',
 						'lib/dependencies/jquery-1.11.1.min.js',
 						'lib/dependencies/velocity.min.js',
+						'lib/dependencies/ResizeSensor.js',
+						'lib/dependencies/ElementQueries.js',
 						'lib/slick.min.js',
 						'lib/bftr.func.js'
 				],
@@ -19,13 +23,13 @@ module.exports = function(grunt) {
 		postcss: {
 			options: {
 				map: {
-					inline: false, // save all sourcemaps as separate files... 
-					annotation: 'css/maps/' // ...to the specified directory 
+					inline: false,
+					annotation: 'css/maps/'
 				},
 				processors: [
-					require('pixrem')(), // add fallbacks for rem units 
-					require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes 
-					require('cssnano')() // minify the result 
+					require('pixrem')(),
+					require('autoprefixer')({browsers: 'last 2 versions'}),
+					require('cssnano')()
 				]
 			},
 			dist: {
@@ -35,21 +39,13 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed'
+					style: 'nested'
 				},
 				files: {
-					'css/sass/style.css': 'src/sass/main.scss'
+					'css/style.css': 'src/sass/main.scss'
 				}
 			}
-		},
-		stylus: {
-			compile: {
-				compress: false,
-				files: {
-					'css/stylus/style.css': 'src/stylus/main.styl', 
-				},
-			},
-		},		
+		},	
 		uglify: {
 			js: {
 				src: ['src/js/**/*.js'],
@@ -58,18 +54,8 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			css: {
-				files: ['src/sass/**/*.scss', 'src/stylus/**/*.styl'],
-				tasks: ['sass', 'postcss', 'stylus'],
-				options: {
-					livereload: {
-						host: 'localhost',
-						port: 7777
-					}
-				}
-			},
-			stylus: {
-				files: ['src/stylus/**/*.styl'],
-				tasks: ['stylus', 'postcss'],
+				files: ['src/sass/**/*.scss'],
+				tasks: ['sass', 'postcss'],
 				options: {
 					livereload: {
 						host: 'localhost',

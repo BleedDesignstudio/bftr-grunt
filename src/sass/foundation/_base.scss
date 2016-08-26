@@ -1,27 +1,66 @@
+html, body, * {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0; padding: 0;
 
-	background: $c-white;
-	color: $c-black;
-
-	font-family: $f-primary;
-	font-size: 18px;
-	line-height: 1.5em;
-
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: none;
+	background: $c-black;
+	color: $c-white;
 }
 
-.row {
-	overflow: auto;
-	// lol
+.wrap {
+	margin: 0 auto;
+	width: 1280px;
 }
 
-.positioner {
-	position: relative;
-	&.full { width: 100%; height: 100%; }
+/*
+ *
+ * FRONT PAGE
+ *
+ */
+
+#logo-bleed {
+	width: 90px;
+	height: 34px;
+	background-image: url('/assets/logo_bleed-white.svg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 }
 
-.hello {
-	@include calc("100% - 10px");
+#bftrGrunt{
+
+	width: 100%;
+	height: 100vh;
+
+	color: $c-white;
+
+	background-image: url('/assets/satan.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+ul.menu {
+	width: 100%;
+	text-align: right;
+	li {
+		display: inline-block;
+		margin: 0 0 0 30px;
+		&:first-child { margin: 0; }
+	}
+	a {
+		color: $c-white;
+		text-decoration: none;
+	}
+}
+
+.quoteContainer {
+	margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+
+	font-size: 2em;
+	line-height: 1.4em;
 }
