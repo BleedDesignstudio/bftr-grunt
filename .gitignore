@@ -1,9 +1,22 @@
-.DS_Store/
-.idea/
-.sass-cache/
-node_modules/
-fonts/
-psd/
-spec/
+.DS_Store
+
+# NODE / SASS / DEPENDENCIES
+node_modules
+jspm_packages
+.sass-cache
+npm-debug.log
+*.log
+logs
+
+# SUBLIME
+*.sublime-settings
+*.sublime-project
+
+# CONFIG
+/craft/config/db.php
+/craft/storage/*
+!/craft/storage/logo/*
+/uploads/
+
+# SKETCH
 *.sketch
-*.psd
