@@ -47,6 +47,7 @@ var app = {
 				currentLetter = 0;
 
 				clearInterval(quoteTimer);
+
 				setTimeout(function() {
 					runnerSpeed = getRandomIntInclusive(60, 120);
 					quoteTimer = setInterval(function(){ quoteRunner(); }, runnerSpeed);
