@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 						'lib/dependencies/velocity.min.js',
 						'lib/dependencies/ResizeSensor.js',
 						'lib/dependencies/ElementQueries.js',
-						'lib/slick.min.js',
+						'lib/plugins/slick.min.js',
 						'lib/bftr.func.js'
 				],
 				dest: 'js/built.js',
