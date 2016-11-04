@@ -218,19 +218,19 @@ body {
   background-size: cover;
   background-position: center center; }
 
-ul.menu {
+.menu {
   width: 100%;
   text-align: right; }
-  ul.menu li {
+  .menu li {
     display: inline-block;
     margin: 0 0 0 30px; }
-    ul.menu li:first-child {
+    .menu li:first-child {
       margin: 0; }
-  ul.menu a {
+  .menu a {
     color: #fff;
     text-decoration: none;
     transition: opacity 200ms ease-out; }
-    ul.menu a:hover {
+    .menu a:hover {
       opacity: 0.5; }
 
 .quoteContainer {
