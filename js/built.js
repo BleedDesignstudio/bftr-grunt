@@ -768,6 +768,37 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 })):i.postSlide(e),i.animateHeight(),void 0):(c!==!0?i.animateSlide(h,function(){i.postSlide(e)}):i.postSlide(e),void 0)))},b.prototype.startLoad=function(){var a=this;a.options.arrows===!0&&a.slideCount>a.options.slidesToShow&&(a.$prevArrow.hide(),a.$nextArrow.hide()),a.options.dots===!0&&a.slideCount>a.options.slidesToShow&&a.$dots.hide(),a.$slider.addClass("slick-loading")},b.prototype.swipeDirection=function(){var a,b,c,d,e=this;return a=e.touchObject.startX-e.touchObject.curX,b=e.touchObject.startY-e.touchObject.curY,c=Math.atan2(b,a),d=Math.round(180*c/Math.PI),0>d&&(d=360-Math.abs(d)),45>=d&&d>=0?e.options.rtl===!1?"left":"right":360>=d&&d>=315?e.options.rtl===!1?"left":"right":d>=135&&225>=d?e.options.rtl===!1?"right":"left":e.options.verticalSwiping===!0?d>=35&&135>=d?"left":"right":"vertical"},b.prototype.swipeEnd=function(){var c,b=this;if(b.dragging=!1,b.shouldClick=b.touchObject.swipeLength>10?!1:!0,void 0===b.touchObject.curX)return!1;if(b.touchObject.edgeHit===!0&&b.$slider.trigger("edge",[b,b.swipeDirection()]),b.touchObject.swipeLength>=b.touchObject.minSwipe)switch(b.swipeDirection()){case"left":c=b.options.swipeToSlide?b.checkNavigable(b.currentSlide+b.getSlideCount()):b.currentSlide+b.getSlideCount(),b.slideHandler(c),b.currentDirection=0,b.touchObject={},b.$slider.trigger("swipe",[b,"left"]);break;case"right":c=b.options.swipeToSlide?b.checkNavigable(b.currentSlide-b.getSlideCount()):b.currentSlide-b.getSlideCount(),b.slideHandler(c),b.currentDirection=1,b.touchObject={},b.$slider.trigger("swipe",[b,"right"])}else b.touchObject.startX!==b.touchObject.curX&&(b.slideHandler(b.currentSlide),b.touchObject={})},b.prototype.swipeHandler=function(a){var b=this;if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.options.draggable===!1&&-1!==a.type.indexOf("mouse")))switch(b.touchObject.fingerCount=a.originalEvent&&void 0!==a.originalEvent.touches?a.originalEvent.touches.length:1,b.touchObject.minSwipe=b.listWidth/b.options.touchThreshold,b.options.verticalSwiping===!0&&(b.touchObject.minSwipe=b.listHeight/b.options.touchThreshold),a.data.action){case"start":b.swipeStart(a);break;case"move":b.swipeMove(a);break;case"end":b.swipeEnd(a)}},b.prototype.swipeMove=function(a){var d,e,f,g,h,b=this;return h=void 0!==a.originalEvent?a.originalEvent.touches:null,!b.dragging||h&&1!==h.length?!1:(d=b.getLeft(b.currentSlide),b.touchObject.curX=void 0!==h?h[0].pageX:a.clientX,b.touchObject.curY=void 0!==h?h[0].pageY:a.clientY,b.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(b.touchObject.curX-b.touchObject.startX,2))),b.options.verticalSwiping===!0&&(b.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(b.touchObject.curY-b.touchObject.startY,2)))),e=b.swipeDirection(),"vertical"!==e?(void 0!==a.originalEvent&&b.touchObject.swipeLength>4&&a.preventDefault(),g=(b.options.rtl===!1?1:-1)*(b.touchObject.curX>b.touchObject.startX?1:-1),b.options.verticalSwiping===!0&&(g=b.touchObject.curY>b.touchObject.startY?1:-1),f=b.touchObject.swipeLength,b.touchObject.edgeHit=!1,b.options.infinite===!1&&(0===b.currentSlide&&"right"===e||b.currentSlide>=b.getDotCount()&&"left"===e)&&(f=b.touchObject.swipeLength*b.options.edgeFriction,b.touchObject.edgeHit=!0),b.swipeLeft=b.options.vertical===!1?d+f*g:d+f*(b.$list.height()/b.listWidth)*g,b.options.verticalSwiping===!0&&(b.swipeLeft=d+f*g),b.options.fade===!0||b.options.touchMove===!1?!1:b.animating===!0?(b.swipeLeft=null,!1):(b.setCSS(b.swipeLeft),void 0)):void 0)},b.prototype.swipeStart=function(a){var c,b=this;return 1!==b.touchObject.fingerCount||b.slideCount<=b.options.slidesToShow?(b.touchObject={},!1):(void 0!==a.originalEvent&&void 0!==a.originalEvent.touches&&(c=a.originalEvent.touches[0]),b.touchObject.startX=b.touchObject.curX=void 0!==c?c.pageX:a.clientX,b.touchObject.startY=b.touchObject.curY=void 0!==c?c.pageY:a.clientY,b.dragging=!0,void 0)},b.prototype.unfilterSlides=b.prototype.slickUnfilter=function(){var a=this;null!==a.$slidesCache&&(a.unload(),a.$slideTrack.children(this.options.slide).detach(),a.$slidesCache.appendTo(a.$slideTrack),a.reinit())},b.prototype.unload=function(){var b=this;a(".slick-cloned",b.$slider).remove(),b.$dots&&b.$dots.remove(),b.$prevArrow&&b.htmlExpr.test(b.options.prevArrow)&&b.$prevArrow.remove(),b.$nextArrow&&b.htmlExpr.test(b.options.nextArrow)&&b.$nextArrow.remove(),b.$slides.removeClass("slick-slide slick-active slick-visible slick-current").attr("aria-hidden","true").css("width","")},b.prototype.unslick=function(a){var b=this;b.$slider.trigger("unslick",[b,a]),b.destroy()},b.prototype.updateArrows=function(){var b,a=this;b=Math.floor(a.options.slidesToShow/2),a.options.arrows===!0&&a.slideCount>a.options.slidesToShow&&!a.options.infinite&&(a.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false"),a.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false"),0===a.currentSlide?(a.$prevArrow.addClass("slick-disabled").attr("aria-disabled","true"),a.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false")):a.currentSlide>=a.slideCount-a.options.slidesToShow&&a.options.centerMode===!1?(a.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),a.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")):a.currentSlide>=a.slideCount-1&&a.options.centerMode===!0&&(a.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),a.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")))},b.prototype.updateDots=function(){var a=this;null!==a.$dots&&(a.$dots.find("li").removeClass("slick-active").attr("aria-hidden","true"),a.$dots.find("li").eq(Math.floor(a.currentSlide/a.options.slidesToScroll)).addClass("slick-active").attr("aria-hidden","false"))},b.prototype.visibility=function(){var a=this;document[a.hidden]?(a.paused=!0,a.autoPlayClear()):a.options.autoplay===!0&&(a.paused=!1,a.autoPlay())},b.prototype.initADA=function(){var b=this;b.$slides.add(b.$slideTrack.find(".slick-cloned")).attr({"aria-hidden":"true",tabindex:"-1"}).find("a, input, button, select").attr({tabindex:"-1"}),b.$slideTrack.attr("role","listbox"),b.$slides.not(b.$slideTrack.find(".slick-cloned")).each(function(c){a(this).attr({role:"option","aria-describedby":"slick-slide"+b.instanceUid+c})}),null!==b.$dots&&b.$dots.attr("role","tablist").find("li").each(function(c){a(this).attr({role:"presentation","aria-selected":"false","aria-controls":"navigation"+b.instanceUid+c,id:"slick-slide"+b.instanceUid+c})}).first().attr("aria-selected","true").end().find("button").attr("role","button").end().closest("div").attr("role","toolbar"),b.activateADA()},b.prototype.activateADA=function(){var a=this,b=a.$slider.find("*").is(":focus");a.$slideTrack.find(".slick-active").attr({"aria-hidden":"false",tabindex:"0"}).find("a, input, button, select").attr({tabindex:"0"}),b&&a.$slideTrack.find(".slick-active").focus()},b.prototype.focusHandler=function(){var b=this;b.$slider.on("focus.slick blur.slick","*",function(c){c.stopImmediatePropagation();var d=a(this);setTimeout(function(){b.isPlay&&(d.is(":focus")?(b.autoPlayClear(),b.paused=!0):(b.paused=!1,b.autoPlay()))},0)})},a.fn.slick=function(){var g,a=this,c=arguments[0],d=Array.prototype.slice.call(arguments,1),e=a.length,f=0;for(f;e>f;f++)if("object"==typeof c||"undefined"==typeof c?a[f].slick=new b(a[f],c):g=a[f].slick[c].apply(a[f].slick,d),"undefined"!=typeof g)return g;return a}});;
 /*
  *
+ * DEVICE CHECKER
+ *
+ */
+
+var isDevice = {
+   Android: function() {
+       return navigator.userAgent.match(/Android/i);
+   },
+   BlackBerry: function() {
+       return navigator.userAgent.match(/BlackBerry/i);
+   },
+   iOS: function() {
+       return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+   },
+   Opera: function() {
+       return navigator.userAgent.match(/Opera Mini/i);
+   },
+   Windows: function() {
+       return navigator.userAgent.match(/IEMobile/i);
+   },
+	Samsung: function() {
+		return navigator.userAgent.match(/SAMSUNG|SGH-[I|N|T]|GT-[I|P|N]|SM-[N|P|T|Z|G]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
+	},
+
+   any: function() {
+       return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+   }
+};
+
+/*
+ *
  * URL HANDLING
  *
  */
@@ -777,7 +808,7 @@ function getUrlVars() {
 	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
 		vars[key] = value;
 	});
-	
+
 	return vars;
 }
 
@@ -805,16 +836,11 @@ function loadTheseThen(imageArray, callback) {
 }
 
 /*
- *
- * MATHEMATICS
- *
- */
-
-/*
  * Map numbers between two value ranges
  */
 
-Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+Number.prototype.map = function (in_min, in_max, out_min, out_max)
+{
 	return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 };
 
@@ -830,7 +856,8 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
  * @type Number
  */
 
-Number.prototype.clamp = function(min, max) {
+Number.prototype.clamp = function(min, max)
+{
 	return Math.min(Math.max(this, min), max);
 };
 
@@ -838,7 +865,8 @@ Number.prototype.clamp = function(min, max) {
  * Returns a random number between 0 (inclusive) and 1 (exclusive)
  */
 
-function getRandom() {
+function getRandom()
+{
 	return Math.random();
 }
 
@@ -846,40 +874,47 @@ function getRandom() {
  * Returns a random number between min (inclusive) and max (exclusive)
  */
 
-function getRandomArbitrary(min, max) {
+function getRandomArbitrary(min, max)
+{
 	return Math.random() * (max - min) + min;
 }
 
-/* 
+/*
  * Returns a random integer between min (included) and max (excluded)
  * Using Math.round() will give you a non-uniform distribution!
  */
-function getRandomInt(min, max) {
+function getRandomInt(min, max)
+{
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 /*
  * Returns a random integer between min (included) and max (included)
  * Using Math.round() will give you a non-uniform distribution!
  */
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min, max)
+{
 	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function svgasimg() {
-	return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
 }
 
 /*
  * ---------------------
  * LISTENER CAN ONLY BE EVOKED SO AND SO MANY TIMES
  * ---------------------
+ * USAGE:
+ *
+ * var myEfficientFn = debounce(function() {
+ *    // All the taxing stuff you do
+ * }, 250);
+ * window.addEventListener('resize', myEfficientFn);
  */
 
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
-function debounce(func, wait, immediate) {
+
+function debounce(func, wait, immediate)
+{
 	var timeout;
 	return function() {
 		var context = this, args = arguments;
@@ -893,19 +928,22 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 }
-/*
- * USAGE:
- * 
-var myEfficientFn = debounce(function() {
-	// All the taxing stuff you do
-}, 250);
-window.addEventListener('resize', myEfficientFn);
-*/
 
 /*
  * ---------------------
  * IF OR ELSE CONDITION IS MET
  * ---------------------
+ *poll(
+ *	 function() {
+ *		return document.getElementById('lightbox').offsetWidth > 0;
+ *	 },
+ *	 function() {
+ *		// Done, success callback
+ *	 },
+ *	 function() {
+ *		// Error, failure callback
+ *	 }
+ *);
  */
 
 function poll(fn, callback, errback, timeout, interval) {
@@ -913,7 +951,7 @@ function poll(fn, callback, errback, timeout, interval) {
 	interval = interval || 100;
 
 	(function p() {
-			// If the condition is met, we're done! 
+			// If the condition is met, we're done!
 			if(fn()) {
 				callback();
 			}
@@ -929,31 +967,16 @@ function poll(fn, callback, errback, timeout, interval) {
 }
 
 /*
- * Usage:  ensure element is visible
- * 
-poll(
-	function() {
-		return document.getElementById('lightbox').offsetWidth > 0;
-	},
-	function() {
-		// Done, success callback
-	},
-	function() {
-		// Error, failure callback
-	}
-);
-*/
-
-/*
  * ---------------------
  * FIRE ONCE ONLY
  * ---------------------
  */
 
-function once(fn, context) { 
+function once(fn, context)
+{
 	var result;
 
-	return function() { 
+	return function() {
 		if(fn) {
 			result = fn.apply(context || this, arguments);
 			fn = null;
@@ -965,7 +988,7 @@ function once(fn, context) {
 
 /*
  * USAGE:
- * 
+ *
 var canOnlyFireOnce = once(function() {
 	console.log('Fired!');
 });
@@ -977,7 +1000,8 @@ var canOnlyFireOnce = once(function() {
  *
  */
 
-function getCookie( name ) {	
+function getCookie( name )
+{
 
 	var start = document.cookie.indexOf( name + "=" );
 
@@ -999,40 +1023,28 @@ function getCookie( name ) {
 
 }
 
-function setCookie( name, value, expires, path, domain, secure ) {
-
+function setCookie( name, value, expires, path, domain, secure )
+{
 	var today = new Date();
-
 	today.setTime( today.getTime() );
 
 	if ( expires ) {
-
 		expires = expires * 1000 * 60 * 60 * 24;
-
 	}
 
 	var expires_date = new Date( today.getTime() + (expires) );
-
 	document.cookie = name+'='+escape( value ) +
 
 		( ( expires ) ? ';expires='+expires_date.toGMTString() : '' ) + //expires.toGMTString()
-
-		( ( path ) ? ';path=' + path : '' ) + 
-
+		( ( path ) ? ';path=' + path : '' ) +
 		( ( domain ) ? ';domain=' + domain : '' ) +
-
 		( ( secure ) ? ';secure' : '' );
 
 }
 
 function deleteCookie( name, path, domain ) {
-
 	if ( getCookie( name ) ) document.cookie = name + '=' +
-
 			( ( path ) ? ';path=' + path : '') +
-
 			( ( domain ) ? ';domain=' + domain : '' ) +
-
 			';expires=Thu, 01-Jan-1970 00:00:01 GMT';
-
 }
