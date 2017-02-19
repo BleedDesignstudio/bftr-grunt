@@ -1,11 +1,18 @@
-$f-one: Helvetica, Arial;
+@include webfont (relative, relative-book-web,   $weight: normal, $style: normal);
+@include webfont (relative, relative-medium-web, $weight: bold,   $style: normal);
+
+@include webfont (relative-mono, relative-10pitch-web, $weight: bold,   $style: normal);
+
+$f-one: 'relative', Helvetica, Arial;
 $f-two: Helvetica, Arial;
 
-body {
-	font-family: $f-one;
-	font-size: 18px;
-	line-height: 1.5em;
+h2 {
+	font-weight: bold;
+}
 
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: none;
+.md-format {
+	h2 {
+		margin-top: 30px;
+		&:last-child { margin-top: 0; }
+	}
 }

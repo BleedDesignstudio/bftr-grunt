@@ -4,22 +4,11 @@ module.exports = function(grunt) {
 	grunt.initConfig();
 
 	grunt.initConfig({
-		concat: {
-			options: {
-				separator: ';\n',
-			},
-			dist: {
-				src: [
-						'lib/dependencies/modernizr.js',
-						'lib/dependencies/jquery-1.11.1.min.js',
-						'lib/dependencies/velocity.min.js',
-						'lib/dependencies/ResizeSensor.js',
-						'lib/dependencies/ElementQueries.js',
-						'lib/plugins/slick.min.js',
-						'lib/bftr.func.js'
-				],
-				dest: 'js/built.js',
-			},
+		browserify: {
+			client: {
+				src: ['src/js/main.js'],
+				dest: 'js/main.js'
+			}
 		},
 		postcss: {
 			options: {
@@ -46,10 +35,10 @@ module.exports = function(grunt) {
 					'css/style.css': 'src/sass/main.scss'
 				}
 			}
-		},	
+		},
 		uglify: {
 			js: {
-				src: ['src/js/**/*.js'],
+				src: ['js/main.js'],
 				dest: 'js/main.js'
 			}
 		},
@@ -64,16 +53,16 @@ module.exports = function(grunt) {
 					}
 				}
 			},
-			js: {
-				files: ['src/js/**/*.js'],
-				tasks: ['uglify', 'concat'],
+			browserify: {
+				files: ['src/js/main.js'],
+				tasks: ['browserify:client'],
 				options: {
 					livereload: {
 						host: 'localhost',
 						port: 7777
 					}
 				}
-			}		
+			}
 		}
 	});
 	grunt.registerTask('default', 'watch');
