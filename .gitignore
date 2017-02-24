@@ -1,6 +1,6 @@
 .DS_Store
 
-assets/fonts/
+assets/fonts/*
 
 # NODE / SASS / DEPENDENCIES
 node_modules
