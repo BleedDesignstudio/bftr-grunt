@@ -4,6 +4,7 @@
   "devDependencies": {
     "autoprefixer-core": "*",
     "browserify": "^14.0.0",
+    "browserify-css": "^0.10.0",
     "browserify-shim": "^3.8.13",
     "browsernizr": "^2.1.0",
     "cssnano": "*",
@@ -17,6 +18,7 @@
     "grunt-postcss": "^0.7.1",
     "marked": "^0.3.6",
     "matchdep": "~1.0.0",
+    "npm-bftrfunc": "^1.0.0",
     "pixrem": "^3.0.0",
     "requestanimationframe": "0.0.23",
     "slick-carousel": "^1.6.0",

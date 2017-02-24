@@ -13,6 +13,9 @@ require('browsernizr/test/touchevents');
 require('browsernizr');
 var Modernizr = require('browsernizr');
 
+// Common Bleed functions
+var bftrfunc = require('npm-bftrfunc');
+
 // jQuery
 $ = require('jquery');
 
@@ -38,12 +41,6 @@ var app = {
 	init: function() {
 		app.initMarkDown();
 		app.initReadMe();
-
-		TweenLite.to( $('#inject-readme'), 2, {
-			y: 200,
-			delay: 1,
-			ease: Elastic.easeInOut.config(1, 0.3)
-		});
 	},
 
 	initMarkDown: function() {

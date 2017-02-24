@@ -1,6 +1,12 @@
 .DS_Store
 
+# not legal
 assets/fonts
+
+# not necessary, but keeping it anyway
+lib/dependencies/
+lib/plugins/
+lib/bftr.func.js
 
 # NODE / SASS / DEPENDENCIES
 node_modules
@@ -14,7 +20,7 @@ logs
 *.sublime-settings
 *.sublime-project
 
-# CONFIG
+# CRAFT
 /craft/config/db.php
 /craft/storage/*
 !/craft/storage/logo/*

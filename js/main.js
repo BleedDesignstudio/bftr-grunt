@@ -24755,6 +24755,67 @@ if (typeof module !== 'undefined' && typeof exports === 'object') {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],23:[function(require,module,exports){
+/*
+ * LOADING
+ * -
+ * Functions for handling element
+ * loading and callbacks.
+ */
+
+module.exports.loadTheseThen = function (imageArray, callback) {
+	var len = imageArray.length;
+	var loadCounter = 0;
+	for(var i = 0; i < len; i++) {
+		$(document.createElement('img')).attr('src', $(imageArray[i]).attr('src')).one("load", function() {
+			// console.log(imageArray[i] + 'is loaded');
+			loadCounter++;
+			if(loadCounter === len) {
+				callback("all are loaded");
+			}
+		}).each(function() {
+			if(this.complete) $(this).trigger("load");
+		});
+	}
+};
+
+/*
+ * NUMBERS
+ * -
+ * Various mathematical functions
+ * for use with THREE, P5, etc.
+ */
+
+module.exports.map = function(input, in_min, in_max, out_min, out_max)
+{
+	return (input - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+};
+
+module.exports.clamp = function(input, min, max)
+{
+	return Math.min(Math.max(input, min), max);
+};
+
+module.exports.getRandom = function()
+{
+	return Math.random();
+};
+
+module.exports.getRandomArbitrary = function(min, max)
+{
+	return Math.random() * (max - min) + min;
+};
+
+module.exports.getRandomInt = function(min, max)
+{
+	return Math.floor(Math.random() * (max - min)) + min;
+};
+
+module.exports.getRandomIntInclusive = function(min, max)
+{
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+},{}],24:[function(require,module,exports){
 /**
  * requestAnimationFrame version: "0.0.23" Copyright (c) 2011-2012, Cyril Agosta ( cyril.agosta.dev@gmail.com) All Rights Reserved.
  * Available via the MIT license.
@@ -24829,7 +24890,7 @@ if (typeof module !== 'undefined' && typeof exports === 'object') {
     }
 
 } )( window );
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -27723,7 +27784,7 @@ if (typeof module !== 'undefined' && typeof exports === 'object') {
 
 }));
 
-},{"jquery":21}],25:[function(require,module,exports){
+},{"jquery":21}],26:[function(require,module,exports){
 /*
  *
  * REQUIRE
@@ -27738,6 +27799,9 @@ require('browsernizr/test/css/rgba');
 require('browsernizr/test/touchevents');
 require('browsernizr');
 var Modernizr = require('browsernizr');
+
+// Common Bleed functions
+var bftrfunc = require('npm-bftrfunc');
 
 // jQuery
 $ = require('jquery');
@@ -27764,12 +27828,6 @@ var app = {
 	init: function() {
 		app.initMarkDown();
 		app.initReadMe();
-
-		TweenLite.to( $('#inject-readme'), 2, {
-			y: 200,
-			delay: 1,
-			ease: Elastic.easeInOut.config(1, 0.3)
-		});
 	},
 
 	initMarkDown: function() {
@@ -27804,4 +27862,4 @@ $(document).ready(function() {
 
 window.app = app;
 
-},{"browsernizr":1,"browsernizr/test/css/rgba":16,"browsernizr/test/touchevents":17,"gsap/CSSPlugin":18,"gsap/TweenMax":20,"jquery":21,"marked":22,"requestanimationframe":23,"slick-carousel":24}]},{},[25]);
+},{"browsernizr":1,"browsernizr/test/css/rgba":16,"browsernizr/test/touchevents":17,"gsap/CSSPlugin":18,"gsap/TweenMax":20,"jquery":21,"marked":22,"npm-bftrfunc":23,"requestanimationframe":24,"slick-carousel":25}]},{},[26]);
