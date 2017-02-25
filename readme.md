@@ -1,6 +1,6 @@
 # bftrGrunt
 
-![](https://s4.postimg.org/667zpolnx/gfx_photo_dunst.jpg)
+![](https://s13.postimg.org/ue1c1vklz/wizard_mono.gif)
 
 ## Installation
 ``` sh

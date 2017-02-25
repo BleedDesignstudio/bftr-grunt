@@ -42,25 +42,32 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: relative;
+  font-family: WorkSans;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/WorkSans-Light.eot");
+  src: url("../assets/fonts/WorkSans-Light.eot?") format("eot"), url("../assets/fonts/WorkSans-Light.woff") format("woff"), url("../assets/fonts/WorkSans-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: WorkSans;
   font-style: normal;
   font-weight: normal;
-  src: url("../assets/fonts/relative-book-web.eot");
-  src: url("../assets/fonts/relative-book-web.eot?") format("eot"), url("../assets/fonts/relative-book-web.woff") format("woff"), url("../assets/fonts/relative-book-web.ttf") format("truetype"); }
+  src: url("../assets/fonts/WorkSans-Regular.eot");
+  src: url("../assets/fonts/WorkSans-Regular.eot?") format("eot"), url("../assets/fonts/WorkSans-Regular.woff") format("woff"), url("../assets/fonts/WorkSans-Regular.ttf") format("truetype"); }
 @font-face {
-  font-family: relative;
+  font-family: WorkSans;
   font-style: normal;
   font-weight: bold;
-  src: url("../assets/fonts/relative-medium-web.eot");
-  src: url("../assets/fonts/relative-medium-web.eot?") format("eot"), url("../assets/fonts/relative-medium-web.woff") format("woff"), url("../assets/fonts/relative-medium-web.ttf") format("truetype"); }
-@font-face {
-  font-family: relative-mono;
-  font-style: normal;
-  font-weight: bold;
-  src: url("../assets/fonts/relative-10pitch-web.eot");
-  src: url("../assets/fonts/relative-10pitch-web.eot?") format("eot"), url("../assets/fonts/relative-10pitch-web.woff") format("woff"), url("../assets/fonts/relative-10pitch-web.ttf") format("truetype"); }
-h2 {
+  src: url("../assets/fonts/WorkSans-Bold.eot");
+  src: url("../assets/fonts/WorkSans-Bold.eot?") format("eot"), url("../assets/fonts/WorkSans-Bold.woff") format("woff"), url("../assets/fonts/WorkSans-Bold.ttf") format("truetype"); }
+h1 {
+  font-size: 6em;
+  line-height: 1em;
   font-weight: bold; }
+
+.emoji {
+  margin-top: 8px;
+  font-size: 1.4em;
+  line-height: 1em; }
 
 .md-format h2 {
   margin-top: 30px; }
@@ -74,10 +81,13 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  color: #000;
-  font-family: "relative", Helvetica, Arial;
+  color: #fff;
+  font-family: WorkSans, Helvetica, Arial;
   font-size: 18px;
   line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none; }
 
@@ -113,6 +123,31 @@ body {
 .content {
   margin-top: 80px;
   margin-bottom: 80px; }
+
+header {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px 14px;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  background-image: url("../assets/wizard_mono.gif");
+  background-size: cover;
+  background-position: center center; }
+  header h1 {
+    margin-left: -7px;
+    margin-top: 0; }
+
+ul.contact {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  font-size: 0.7em;
+  line-height: 1.3em; }
+  ul.contact li a {
+    text-decoration: none;
+    color: #fff; }
+    ul.contact li a:hover {
+      color: #000; }
 
 .videoWrapper {
   position: relative;

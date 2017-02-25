@@ -1,13 +1,20 @@
-@include webfont (relative, relative-book-web,   $weight: normal, $style: normal);
-@include webfont (relative, relative-medium-web, $weight: bold,   $style: normal);
+@include webfont (WorkSans, WorkSans-Light, $weight: 100, $style: normal);
+@include webfont (WorkSans, WorkSans-Regular, $weight: normal, $style: normal);
+@include webfont (WorkSans, WorkSans-Bold, $weight: bold,   $style: normal);
 
-@include webfont (relative-mono, relative-10pitch-web, $weight: bold,   $style: normal);
-
-$f-one: 'relative', Helvetica, Arial;
+$f-one: WorkSans, Helvetica, Arial;
 $f-two: Helvetica, Arial;
 
-h2 {
+h1 {
+	font-size:   6em;
+	line-height: 1em;
 	font-weight: bold;
+}
+
+.emoji {
+	margin-top: 8px;
+	font-size: 1.4em;
+	line-height: 1em;
 }
 
 .md-format {

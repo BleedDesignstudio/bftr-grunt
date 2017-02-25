@@ -6,11 +6,15 @@ body {
 	margin: 0; padding: 0;
 
 	background: $c-white;
-	color: $c-black;
+	color: $c-white;
 
 	font-family: $f-one;
 	font-size: 18px;
 	line-height: 1.5em;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
 
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
@@ -50,4 +54,38 @@ $label-padding: 20px;
 .content {
 	margin-top: 80px;
 	margin-bottom: 80px;
+}
+
+header {
+	width:  100vw;
+	height: 100vh;
+
+	padding: 0px 14px;
+
+	h1 { margin-left: -7px; margin-top: 0; }
+
+	font-size: 0.9em;
+	line-height: 1.2em;
+
+	background-image: url('../assets/wizard_mono.gif');
+	background-size:  cover;
+	background-position: center center;
+}
+
+ul.contact {
+	position: absolute;
+	bottom: 10px;
+	left: 14px;
+
+	font-size: 0.7em;
+	line-height: 1.3em;
+
+	li {
+		a {
+			text-decoration: none; color: $c-white;
+			&:hover {
+				color: $c-black;
+			}
+		}
+	}
 }
