@@ -27824,13 +27824,19 @@ var marked = require('marked');
  *
  */
 
+class yoyo {
+	constructor() {
+		console.log('something');
+	}
+}
+
 var app = {
-	init: function() {
+	init: function () {
 		//app.initMarkDown();
 		//app.initReadMe();
 		var request = new XMLHttpRequest();
 
-		request.onreadystatechange = function() {
+		request.onreadystatechange = function () {
 			if (request.readyState === 1) {
 				// send has been called. it will start
 			}
@@ -27840,8 +27846,7 @@ var app = {
 			if (request.readyState === 4) {
 				if (request.status === 200) {
 					// all good, no problems
-				}
-				else {
+				} else {
 					throw new Error(request.response);
 				}
 
@@ -27853,10 +27858,9 @@ var app = {
 
 		request.open('GET', 'package.json');
 		request.send();
-
 	},
 
-	writePackageJSON: function(data) {
+	writePackageJSON: function (data) {
 		var $depinject = $('#inject-deps');
 		var deps = data.devDependencies;
 		var keys = [];
@@ -27865,41 +27869,14 @@ var app = {
 		$depinject.html('');
 
 		for (var i = 0; i < keys.length; i++) {
-			var sep = ( i == keys.length-1 ? '' : ' &middot; ');
-			$depinject.append(keys[i]+sep);
+			var sep = i == keys.length - 1 ? '' : ' &middot; ';
+			$depinject.append(keys[i] + sep);
 		}
-	},
-
-
-	/*
-	initMarkDown: function() {
-		marked.setOptions({
-		  renderer: new marked.Renderer(),
-		  gfm:         true,
-		  tables:      true,
-		  breaks:      false,
-		  pedantic:    false,
-		  sanitize:    false,
-		  smartLists:  true,
-		  smartypants: false
-		});
-	},
-	initReadMe: function() {
-		$.ajax({
-			url: "readme.md",
-			type: "GET"
-		})
-		.done(function(data) {
-			$('#inject-readme').html( marked(data) );
-		})
-		.fail(function(jqXHR, textStatus, errorThrown) {
-			 $('#inject-readme').html('Failed to load readme.md');
-		});
 	}
-	*/
+
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
 	app.init();
 });
 

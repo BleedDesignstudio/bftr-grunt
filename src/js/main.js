@@ -37,6 +37,12 @@ var marked = require('marked');
  *
  */
 
+class yoyo {
+	constructor() {
+		console.log('something');
+	}
+}
+
 var app = {
 	init: function() {
 		//app.initMarkDown();

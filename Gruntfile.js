@@ -7,7 +7,12 @@ module.exports = function(grunt) {
 		browserify: {
 			client: {
 				src: ['src/js/main.js'],
-				dest: 'js/main.js'
+				dest: 'js/main.js',
+				options: {
+					transform: [
+						["babelify"]
+					]
+				}
 			}
 		},
 		postcss: {

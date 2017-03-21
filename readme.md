@@ -1,4 +1,4 @@
-# bftrGrunt
+# bftr-grunt
 
 ![](https://s13.postimg.org/ue1c1vklz/wizard_mono.gif)
 
